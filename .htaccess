@@ -1,0 +1,86 @@
+Options -Indexes
+ErrorDocument 404 https://learnizy.in/404
+ErrorDocument 500 https://learnizy.in/404
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^404 404.php [NC,L]
+RewriteRule ^previous-pdf previous-pdf.php [NC,L]
+RewriteRule ^notification notification.php [NC,L]
+RewriteRule ^create_contact_us create_contact_us.php [NC,L]
+#mock
+RewriteRule ^get_question_by_section get_question_by_section.php [NC,L]
+RewriteRule ^submitMock submitMock.php [NC,L]
+RewriteRule ^getMockQuestion getMockQuestion.php [NC,L]
+RewriteRule ^user_mock_test_question user_mock_test_question.php [NC,L]
+
+#---
+#profile
+RewriteRule ^update-profile update-profile.php [NC,L]
+RewriteRule ^profile profile.php [NC,L]
+#profile
+#reset pass
+RewriteRule ^resetsendMail resetsendMail.php [NC,L]
+RewriteRule ^updatepassword updatepassword.php [NC,L]
+RewriteRule ^recover recover.php [NC,L]
+
+
+
+#reset pass
+#pay
+RewriteRule ^thankyou thankyou.php [NC,L]
+RewriteRule ^OneSignalSDKWorker OneSignalSDKWorker.js [NC,L]
+RewriteRule ^pay/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ pay.php?type=$1&id=$2
+#pay
+
+RewriteRule ^googlelogin/loginwithgoogle googlelogin/loginwithgoogle.php [NC,L]
+RewriteRule ^review/usermockreview review/usermockreview.php [NC,L]
+RewriteRule ^users/userlogin users/userlogin.php [NC,L]
+RewriteRule ^users/withgoogle users/withgoogle.php [NC,L]
+RewriteRule ^users/createuser users/createuser.php [NC,L]
+RewriteRule ^user-getMockQuestionByUser user-getMockQuestionByUser.php [NC,L]
+RewriteRule ^get-mock-package-by-course get_mock_package_by_course.php [NC,L]
+RewriteRule ^get-previous-paper-by-course get_previous_paper_by_course.php [NC,L]
+RewriteRule ^get_quiz_by_course get_quiz_by_course.php [NC,L]
+RewriteRule ^about-us-learnizy about.php [NC,L]
+RewriteRule ^previous-year-paper previouspaper.php [NC,L]
+RewriteRule ^getnoti getnoti.php [NC,L]
+
+RewriteRule ^logout logout.php [NC,L]
+RewriteRule ^faq faq.php [NC,L]
+RewriteRule ^contact-us contact-us.php [NC,L]
+RewriteRule ^create_contact_us create_contact_us.php [NC,L]
+RewriteRule ^become-an-educator become-an-educator.php [NC,L]
+RewriteRule ^apply_educator apply_educator.php [NC,L]
+RewriteRule ^login login.php [NC,L]
+RewriteRule ^quizzes quizzes.php [NC,L]
+RewriteRule ^getQuizQuestion getQuizQuestion.php [NC,L]
+
+RewriteRule ^quiz/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ quiz.php?alias=$1&n=$2
+RewriteRule ^lesson-detail/get_pdf lesson-detail/get_pdf.php [NC,L]
+RewriteRule ^lesson-detail/get_reviews lesson-detail/get_reviews.php [NC,L]
+RewriteRule ^create_course_review create_course_review.php [NC,L]
+# RewriteRule ^ibps-afo-exam-online-study-material afo-exam.php [NC,L]
+RewriteRule ^course/([a-zA-Z0-9_-]+)$ course.php?&alias=$1
+RewriteRule ^online-test-series/([a-zA-Z0-9_-]+)$ online-test-series.php?alias=$1
+RewriteRule ^competitive-exams/([a-zA-Z0-9_-]+)$ exam.php?alias=$1
+RewriteRule ^mock-solution/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ mock-solution.php?alias=$1&n=$2
+RewriteRule ^analysis/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ analysis.php?alias=$1&n=$2
+RewriteRule ^mock-instruction/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ mock-instruction.php?alias=$1&n=$2
+RewriteRule ^run-mock-test/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ run-mock-test.php?alias=$1&n=$2&l=$3
+RewriteRule ^test-series/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ test-series.php?alias=$1&n=$2
+RewriteRule ^lesson-detail/run-lesson/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ lesson-detail/run-lesson.php?alias=$1&n=$2
+RewriteRule ^lesson-detail/run-lesson/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ lesson-detail/run-lesson.php?alias=$1&n=$2&p=$3
+

@@ -1,0 +1,15 @@
+06-06-2021 11:22:40    u_id = 1079
+06-06-2021 11:24:00    u_id = 1079    type = course    type id = 2
+06-06-2021 11:24:32    u_id = 1079    type = course    type id = 1
+07-06-2021 12:17:20    u_id = 1089    type = course    type id = 1
+07-06-2021 12:40:08    u_id = 1093    type = course    type id = 1
+07-06-2021 13:35:11    u_id = 1103    type = course    type id = 2
+07-06-2021 20:22:58    u_id = 1107    type = course    type id = 1
+08-06-2021 06:03:19    u_id = 1111    type = course    type id = 1
+08-06-2021 07:56:37    u_id = 762    type = course    type id = 3
+08-06-2021 10:51:15    u_id = 1113    type = course    type id = 1
+08-06-2021 11:29:58    u_id = 1129    type = course    type id = 1
+08-06-2021 12:05:07    u_id = 1093    type = course    type id = 1
+08-06-2021 12:10:40    u_id = 1133    type = course    type id = 1
+08-06-2021 12:38:45    u_id = 1137    type = course    type id = 1checked
+08-06-2021 16:00:54    u_id = 1141    type = course    type id = 2
